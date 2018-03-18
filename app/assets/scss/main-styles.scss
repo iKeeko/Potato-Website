@@ -1,0 +1,11 @@
+@import 'modules/_variables';
+
+ul {
+  display: flex;
+  columns: 100px 3;
+
+  li {
+    color: green;
+    flex-basis: 50%;
+  }
+}
