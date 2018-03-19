@@ -1,6 +1,6 @@
-.home {
+.features {
   text-align: center;
-  background-color: $brown;
+  background-color: $lightBrown;
   padding-bottom: 60px;
 
   @include atSmall {
@@ -10,9 +10,9 @@
   &__title {
     font-family: $mainFont;
     font-size: 1.8rem;
-    color: $white;
+    color: $grey;
     font-weight: 100;
-    text-shadow: 2px 2px 4px $grey;
+    text-shadow: 2px 2px 4px $white;
 
     @include atSmall {
       font-size: 2.6rem;
@@ -22,17 +22,28 @@
   &__subtitle {
     font-family: $mainFont;
     font-size: 1.1rem;
-    color: $white;
+    color: $grey;
     font-weight: 100;
-    margin: 7px 0;
+    margin: 0;
 
     @include atSmall {
       font-size: 1.7rem;
-      margin: 12px 0;
     }
   }
 
-  &__image {
-    margin-top: 10px;
+  &__image img {
+    margin-top: 20px;
+  }
+
+  &__transformed-images {
+    margin-top: 15px;
+
+    img {
+      margin: 0;
+
+      @include atSmall {
+        margin: 0 20px;
+      }
+    }
   }
 }

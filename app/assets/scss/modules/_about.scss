@@ -12,6 +12,7 @@
     font-size: 1.8rem;
     color: $white;
     font-weight: 100;
+    text-shadow: 2px 2px 4px $grey;
 
     @include atSmall {
       font-size: 2.6rem;
@@ -23,11 +24,10 @@
     font-size: 1.1rem;
     color: $white;
     font-weight: 100;
-    margin: 7px 0;
+    margin: 0;
 
     @include atSmall {
       font-size: 1.7rem;
-      margin: 12px 0;
     }
   }
 

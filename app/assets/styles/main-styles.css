@@ -22,7 +22,8 @@ img {
     font-family: "Baloo Bhaijaan", cursive;
     font-size: 1.8rem;
     color: #fff;
-    font-weight: 100; }
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #474747; }
     @media (min-width: 470px) {
       .home__title {
         font-size: 2.6rem; } }
@@ -388,7 +389,8 @@ footer {
     font-family: "Baloo Bhaijaan", cursive;
     font-size: 1.8rem;
     color: #fff;
-    font-weight: 100; }
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #474747; }
     @media (min-width: 470px) {
       .about__title {
         font-size: 2.6rem; } }
@@ -397,11 +399,10 @@ footer {
     font-size: 1.1rem;
     color: #fff;
     font-weight: 100;
-    margin: 7px 0; }
+    margin: 0; }
     @media (min-width: 470px) {
       .about__subtitle {
-        font-size: 1.7rem;
-        margin: 12px 0; } }
+        font-size: 1.7rem; } }
   .about__image {
     display: flex;
     align-items: flex-start;
@@ -423,6 +424,41 @@ footer {
       @media (min-width: 620px) {
         .about__image__image2 {
           margin-top: 0; } }
+
+.features {
+  text-align: center;
+  background-color: #EDE0BB;
+  padding-bottom: 60px; }
+  @media (min-width: 470px) {
+    .features {
+      padding-bottom: 100px; } }
+  .features__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #474747;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #fff; }
+    @media (min-width: 470px) {
+      .features__title {
+        font-size: 2.6rem; } }
+  .features__subtitle {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.1rem;
+    color: #474747;
+    font-weight: 100;
+    margin: 0; }
+    @media (min-width: 470px) {
+      .features__subtitle {
+        font-size: 1.7rem; } }
+  .features__image img {
+    margin-top: 20px; }
+  .features__transformed-images {
+    margin-top: 15px; }
+    .features__transformed-images img {
+      margin: 0; }
+      @media (min-width: 470px) {
+        .features__transformed-images img {
+          margin: 0 20px; } }
 
 body {
   background-color: #efefef; }
