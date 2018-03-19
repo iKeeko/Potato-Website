@@ -1,0 +1,33 @@
+.home {
+  text-align: center;
+  background-color: $brown;
+  padding-bottom: 60px;
+
+  @include atSmall {
+    padding-bottom: 100px;
+  }
+
+  &__title {
+    font-family: $mainFont;
+    font-size: 1.8rem;
+    color: $white;
+    font-weight: 100;
+
+    @include atSmall {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__subtitle {
+    font-family: $mainFont;
+    font-size: 1.1rem;
+    color: $white;
+    font-weight: 100;
+    margin: 7px 0;
+
+    @include atSmall {
+      font-size: 1.7rem;
+      margin: 12px 0;
+    }
+  }
+}

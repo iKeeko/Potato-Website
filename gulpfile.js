@@ -16,7 +16,7 @@ gulp.task('watch', ['sass'], function() {
     server: './app'
   });
 
-  gulp.watch('app/assets/scss/main-styles.scss', ['sass']);
+  gulp.watch('app/assets/scss/**/*.scss', ['sass']);
   gulp.watch('app/*.html').on('change', browserSync.reload);
   gulp.watch('app/assets/scripts/*.js').on('change', browserSync.reload);
 });

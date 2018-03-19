@@ -1,0 +1,219 @@
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1080px;
+  margin-bottom: 100px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  @include atSmall {
+    margin-bottom: 120px;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    font-family: $mainFont;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin: 10px 10px 0 0;
+
+    @include atSmall {
+      font-size: 2rem;
+      font-weight: 100;
+      margin: 10px 0 0 20px;
+      left: 0;
+      top: auto;
+      right: auto;
+    }
+  }
+
+  &__list {
+    margin: 30px 15px;
+    display: none;
+
+    @include atMedium {
+      display: initial;
+    }
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-family: $mainFont;
+      font-weight: 100;
+      font-size: 0.9rem;
+
+      &:hover {
+        color: $grey;
+      }
+    }
+
+  }
+
+  &__buy-now {
+    border: $white 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+
+    &:hover {
+      border: $grey 1px solid;
+    }
+  }
+
+}
+
+
+
+
+// FOOTER
+
+footer {
+  background-color: $dirtyWhite;
+}
+
+.footer {
+  display: block;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  @include atSmall {
+    max-width: 1080px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    align-self: center;
+
+    li {
+      margin: 0 20px 16px 20px;
+      font-family: sans-serif;
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: $grey;
+    }
+
+    li:last-child {
+      margin: 0 20px 0 20px;
+    }
+  }
+
+  &__links {
+    display: block;
+    margin-top: 15px;
+
+    @include atSmall {
+      display: flex;
+      justify-content: flex-end;
+      align-self: center;
+      margin-top: 0;
+    }
+
+    li {
+        margin: 12px 20px;
+
+        @include atSmall {
+          margin: 0 20px;
+        }
+
+        a {
+          color: $grey;
+          text-decoration: none;
+          font-family: sans-serif;
+          font-size: 0.7rem;
+
+          &:hover {
+            color: $green;
+          }
+        }
+    }
+
+    li:last-child {
+      margin: 12px 0 0 20px;
+
+      @include atSmall {
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+
+// MOBILE NAV
+
+.mobile-nav {
+  padding: 15px 0;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  background-color: rgba(102, 70, 39, 0.8);
+  z-index: 1;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: all .3s ease-out;
+
+  @include atSmall {
+    display: none;
+  }
+
+  &__list {
+    margin: 15px 20px;
+
+    a {
+      text-decoration: none;
+      font-family: $mainFont;
+      color: $white;
+    }
+  }
+
+  &__buy-now {
+    border: $white 1px solid;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  &__burger-icon {
+    position: absolute;
+    z-index: 2;
+    color: $white;
+    margin: 5px 0 0 10px;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    @include atSmall {
+      display: none;
+    }
+  }
+
+  &__close-icon {
+    position: absolute;
+    z-index: 2;
+    color: $white;
+    margin: 10px 0 0 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    @include atSmall {
+      display: none;
+    }
+  }
+}
+
+.close-mobile-nav {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transform: scaleY(1.7);
+
+}
