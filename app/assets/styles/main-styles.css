@@ -380,7 +380,7 @@ footer {
 
 .about {
   text-align: center;
-  background-color: #9b3e0f;
+  background-color: #a35a39;
   padding-bottom: 60px; }
   @media (min-width: 470px) {
     .about {
@@ -459,6 +459,57 @@ footer {
       @media (min-width: 470px) {
         .features__transformed-images img {
           margin: 0 20px; } }
+
+.nutrition {
+  text-align: center;
+  background-color: #8BA776;
+  padding-bottom: 60px; }
+  @media (min-width: 470px) {
+    .nutrition {
+      padding-bottom: 100px; } }
+  .nutrition__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #474747; }
+    @media (min-width: 470px) {
+      .nutrition__title {
+        font-size: 2.6rem; } }
+  .nutrition__subtitle {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 100;
+    margin: 0; }
+    @media (min-width: 470px) {
+      .nutrition__subtitle {
+        font-size: 1.7rem; } }
+  .nutrition__image {
+    margin-top: 20px; }
+  .nutrition__nutrients-list {
+    display: flex;
+    max-width: 700px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    @media (min-width: 470px) {
+      .nutrition__nutrients-list {
+        margin-top: 20px; } }
+    .nutrition__nutrients-list li {
+      font-family: sans-serif;
+      color: #fff;
+      font-weight: 100;
+      font-size: 1rem;
+      flex-basis: 50%;
+      margin: 5px 0; }
+      @media (min-width: 620px) {
+        .nutrition__nutrients-list li {
+          font-size: 1.4rem;
+          flex-basis: initial;
+          margin: 0; } }
 
 body {
   background-color: #efefef; }

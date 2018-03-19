@@ -1,6 +1,6 @@
-.about {
+.nutrition {
   text-align: center;
-  background-color: #a35a39;
+  background-color: $green;
   padding-bottom: 60px;
 
   @include atSmall {
@@ -32,31 +32,35 @@
   }
 
   &__image {
-    display: flex;
-    align-items: flex-start;
-    max-width: 720px;
     margin-top: 20px;
+  }
+
+  &__nutrients-list {
+    display: flex;
+    max-width: 700px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-around;
     flex-wrap: wrap;
 
-    &__image1 {
-      margin-right: 10px;
-
-      @include atSmall {
-        margin-right: 0;
-      }
+    @include atSmall {
+      margin-top: 20px;
     }
 
-    &__image2 {
-        margin-left: 0px;
-        margin-top: 20px;
-        align-self: center;
+    li {
+      font-family: sans-serif;
+      color: $white;
+      font-weight: 100;
+      font-size: 1rem;
+      flex-basis: 50%;
+      margin: 5px 0;
 
-        @include atMedium {
-          margin-top: 0;
-        }
+      @include atMedium {
+        font-size: 1.4rem;
+        flex-basis: initial;
+        margin: 0;
+      }
     }
   }
 }
