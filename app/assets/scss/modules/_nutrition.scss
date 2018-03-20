@@ -32,12 +32,12 @@
   }
 
   &__image {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   &__nutrients-list {
     display: flex;
-    max-width: 700px;
+    max-width: 240px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -45,7 +45,8 @@
     flex-wrap: wrap;
 
     @include atSmall {
-      margin-top: 20px;
+      margin-top: 30px;
+      max-width: 700px;
     }
 
     li {
@@ -56,7 +57,7 @@
       flex-basis: 50%;
       margin: 5px 0;
 
-      @include atMedium {
+      @include atSmall {
         font-size: 1.4rem;
         flex-basis: initial;
         margin: 0;

@@ -451,9 +451,9 @@ footer {
       .features__subtitle {
         font-size: 1.7rem; } }
   .features__image img {
-    margin-top: 20px; }
+    margin-top: 30px; }
   .features__transformed-images {
-    margin-top: 15px; }
+    margin-top: 25px; }
     .features__transformed-images img {
       margin: 0; }
       @media (min-width: 470px) {
@@ -486,10 +486,10 @@ footer {
       .nutrition__subtitle {
         font-size: 1.7rem; } }
   .nutrition__image {
-    margin-top: 20px; }
+    margin-top: 30px; }
   .nutrition__nutrients-list {
     display: flex;
-    max-width: 700px;
+    max-width: 240px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -497,7 +497,8 @@ footer {
     flex-wrap: wrap; }
     @media (min-width: 470px) {
       .nutrition__nutrients-list {
-        margin-top: 20px; } }
+        margin-top: 30px;
+        max-width: 700px; } }
     .nutrition__nutrients-list li {
       font-family: sans-serif;
       color: #fff;
@@ -505,11 +506,114 @@ footer {
       font-size: 1rem;
       flex-basis: 50%;
       margin: 5px 0; }
-      @media (min-width: 620px) {
+      @media (min-width: 470px) {
         .nutrition__nutrients-list li {
           font-size: 1.4rem;
           flex-basis: initial;
           margin: 0; } }
 
+.buy {
+  padding-bottom: 60px;
+  background-color: #ead583; }
+  @media (min-width: 470px) {
+    .buy {
+      padding-bottom: 100px; } }
+  .buy__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #474747;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #fff;
+    text-align: center; }
+    @media (min-width: 470px) {
+      .buy__title {
+        font-size: 2.6rem; } }
+  .buy__items-to-sell-container {
+    max-width: 1000px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    @media (min-width: 620px) {
+      .buy__items-to-sell-container {
+        flex-direction: row;
+        margin-top: 20px; } }
+    .buy__items-to-sell-container__deal-container {
+      align-self: center;
+      margin: 10px auto 0 auto;
+      border-bottom: 1px #fff solid; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container__deal-container {
+          margin: 0 auto;
+          border-bottom: 0; } }
+      .buy__items-to-sell-container__deal-container--pro {
+        border: 0;
+        padding: 0;
+        border-bottom: 1px #fff solid; }
+        @media (min-width: 620px) {
+          .buy__items-to-sell-container__deal-container--pro {
+            border-left: 1px #fff solid;
+            border-right: 1px #fff solid;
+            border-bottom: 0;
+            padding: 0 40px; } }
+    .buy__items-to-sell-container__deal-title {
+      color: #474747;
+      font-family: "Baloo Bhaijaan", cursive;
+      font-size: 1.5rem;
+      font-weight: 100;
+      text-align: center; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container__deal-title {
+          font-size: 2rem; } }
+    .buy__items-to-sell-container li {
+      color: #474747;
+      font-family: sans-serif;
+      margin: 15px 0;
+      font-size: 0.8rem; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container li {
+          font-size: 1rem; } }
+    .buy__items-to-sell-container__deal-button {
+      padding: 5px;
+      width: 100px;
+      border-radius: 10px;
+      border: 1px #474747 solid;
+      background-color: #FFD700;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: "Baloo Bhaijaan", cursive;
+      color: #474747;
+      margin: 10px 0 0 0;
+      display: block;
+      margin: 30px auto 0 auto; }
+      .buy__items-to-sell-container__deal-button:hover {
+        background-color: #f9e9a9; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container__deal-button {
+          margin: 50px auto 0 auto;
+          font-size: 1.2rem;
+          padding: 10px; } }
+    .buy__items-to-sell-container__deal-price {
+      color: #474747;
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      text-align: center;
+      margin: 5px 0; }
+    .buy__items-to-sell-container__deal-image {
+      display: block;
+      margin: 10px auto; }
+
 body {
   background-color: #efefef; }
+
+.potato-word-dark {
+  color: #474747;
+  text-shadow: 1px 1px 0 #fff; }
+
+.potato-word-light {
+  color: #fff;
+  text-shadow: 1px 1px 0 #474747; }

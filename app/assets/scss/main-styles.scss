@@ -22,10 +22,21 @@ img {
 @import 'modules/_about';
 @import 'modules/_features';
 @import 'modules/_nutrition';
+@import 'modules/_buy';
 
 
 
 
 body {
   background-color: $dirtyWhite;
+}
+
+.potato-word-dark {
+  color: $grey;
+  text-shadow: 1px 1px 0 $white;
+}
+
+.potato-word-light {
+  color: $white;
+  text-shadow: 1px 1px 0 $grey;
 }

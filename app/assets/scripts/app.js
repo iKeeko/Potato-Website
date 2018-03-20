@@ -26,6 +26,9 @@ const mainApp = new Vue({
     },
     messageSend() {
       this.message = 'message sent or not!';
+    },
+    buyButton() {
+      alert('Oops out of stock!');
     }
   }
 });

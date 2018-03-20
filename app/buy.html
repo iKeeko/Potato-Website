@@ -11,7 +11,7 @@
     <title>Potato Website</title>
   </head>
   <body>
-    <div class="about" id="vue">
+    <div class="buy" id="vue">
       <!-- MOBILE NAV START HERE -->
       <p v-if="burgerIcon" class="mobile-nav__burger-icon" @click="openNav">&#9776;</p>
       <nav class="mobile-nav-container">
@@ -35,21 +35,42 @@
           <li class="main-nav__list"><a href="buy.html"><span class="main-nav__buy-now">BUY IT NOW</span></a></li>
         </ul>
       </nav>
-      <div class="wrapper">
-        <h1 class="about__title">Different shapes and sizes</h1>
-        <p class="about__subtitle"><span class="potato-word-light">Potato</span> comes in many different unique shapes and sizes.</p>
-        <p class="about__subtitle">Find the one that fits your personal preferences</p>
-        <div class="about__image">
-          <picture class="about__image__image1">
-            <source srcset="assets/images/potato-about1.png" alt="potato hero" media="(min-width: 470px)"/>
-            <img src="assets/images/potato-about1-small.png" alt="potato hero"/>
-          </picture>
-          <picture class="about__image__image2">
-            <source  srcset="assets/images/potato-about2.png" alt="potato hero" media="(min-width: 470px)"/>
-            <img src="assets/images/potato-about2-small.png" alt="potato hero"/>
-          </picture>
 
+      <div class="wrapper">
+        <h1 class="buy__title">Order one (or more) today!</h1>
+        <div class="buy__items-to-sell-container">
+          <div class="buy__items-to-sell-container__deal-container">
+            <h3 class="buy__items-to-sell-container__deal-title"><span class="potato-word-dark">Potato </span>Lite</h3>
+            <li>&#9657; Small and compact</li>
+            <li>&#9657; Highly portable</li>
+            <li>&#9657; Unapologetically delicious</li>
+            <button @click.prevent="buyButton" class="buy__items-to-sell-container__deal-button">ORDER</button>
+            <p class="buy__items-to-sell-container__deal-price">starting at $9.99</p>
+            <img class="buy__items-to-sell-container__deal-image" src="assets/images/potato-lite.png" alt="potato lite"/>
+          </div>
+          <div class="buy__items-to-sell-container__deal-container buy__items-to-sell-container__deal-container--pro">
+            <h3 class="buy__items-to-sell-container__deal-title"><span class="potato-word-dark">Potato</span> Pro</h3>
+            <li>&#9657; Highly portable</li>
+            <li>&#9657; Easily sliceable</li>
+            <li>&#9657; Unapologetically delicious</li>
+            <li>&#9657; Very nutritious</li>
+            <button @click.prevent="buyButton" class="buy__items-to-sell-container__deal-button">ORDER</button>
+            <p class="buy__items-to-sell-container__deal-price">starting at $19.99</p>
+            <img class="buy__items-to-sell-container__deal-image" src="assets/images/potato-pro.png" alt="potato lite"/>
+          </div>
+          <div class="buy__items-to-sell-container__deal-container">
+            <h3 class="buy__items-to-sell-container__deal-title"><span class="potato-word-dark">Potato</span> Team</h3>
+            <li>&#9657; Ideal for bigger groups</li>
+            <li>&#9657; Easily sliceable</li>
+            <li>&#9657; Unapologetically delicious</li>
+            <li>&#9657; Very nutritious</li>
+            <button @click.prevent="buyButton" class="buy__items-to-sell-container__deal-button">ORDER</button>
+            <p class="buy__items-to-sell-container__deal-price">starting at $39.99</p>
+            <img class="buy__items-to-sell-container__deal-image" src="assets/images/potato-team.png" alt="potato lite"/>
+          </div>
         </div>
+
+
       </div>
       <!-- MODALS START -->
       <div :class="{'free-potato': potatoModal, 'close-free-potato-modal' : !potatoModal}">
