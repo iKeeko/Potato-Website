@@ -1,0 +1,619 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+.wrapper {
+  padding: 0 12px; }
+
+.home {
+  text-align: center;
+  background-color: #B09C88;
+  padding-bottom: 60px; }
+  @media (min-width: 470px) {
+    .home {
+      padding-bottom: 100px; } }
+  .home__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #474747; }
+    @media (min-width: 470px) {
+      .home__title {
+        font-size: 2.6rem; } }
+  .home__subtitle {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 100;
+    margin: 7px 0; }
+    @media (min-width: 470px) {
+      .home__subtitle {
+        font-size: 1.7rem;
+        margin: 12px 0; } }
+  .home__image {
+    margin-top: 10px; }
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1080px;
+  margin-bottom: 100px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+  @media (min-width: 470px) {
+    .main-nav {
+      margin-bottom: 120px; } }
+  .main-nav__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    font-family: "Baloo Bhaijaan", cursive;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin: 10px 10px 0 0; }
+    @media (min-width: 470px) {
+      .main-nav__logo {
+        font-size: 2rem;
+        font-weight: 100;
+        margin: 10px 0 0 20px;
+        left: 0;
+        top: auto;
+        right: auto; } }
+  .main-nav__list {
+    margin: 30px 15px;
+    display: none; }
+    @media (min-width: 620px) {
+      .main-nav__list {
+        display: initial; } }
+    .main-nav__list a {
+      text-decoration: none;
+      color: #fff;
+      font-family: "Baloo Bhaijaan", cursive;
+      font-weight: 100;
+      font-size: 0.9rem; }
+      .main-nav__list a:hover {
+        color: #474747; }
+  .main-nav__buy-now {
+    border: #fff 1px solid;
+    padding: 10px;
+    border-radius: 10px; }
+    .main-nav__buy-now:hover {
+      border: #474747 1px solid; }
+
+footer {
+  background-color: #efefef; }
+
+.footer {
+  display: block;
+  padding-top: 17px;
+  padding-bottom: 17px; }
+  @media (min-width: 470px) {
+    .footer {
+      max-width: 1080px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between; } }
+  .footer__copyright {
+    align-self: center; }
+    .footer__copyright li {
+      margin: 0 20px 16px 20px;
+      font-family: sans-serif;
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: #474747; }
+    .footer__copyright li:last-child {
+      margin: 0 20px 0 20px; }
+  .footer__links {
+    display: block;
+    margin-top: 15px; }
+    @media (min-width: 470px) {
+      .footer__links {
+        display: flex;
+        justify-content: flex-end;
+        align-self: center;
+        margin-top: 0; } }
+    .footer__links li {
+      margin: 12px 20px; }
+      @media (min-width: 470px) {
+        .footer__links li {
+          margin: 0 20px; } }
+      .footer__links li a {
+        color: #474747;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 0.7rem; }
+        .footer__links li a:hover {
+          color: #8BA776; }
+    .footer__links li:last-child {
+      margin: 12px 0 0 20px; }
+      @media (min-width: 470px) {
+        .footer__links li:last-child {
+          margin: 0 20px; } }
+  .footer__small-potato-image {
+    cursor: pointer; }
+
+.mobile-nav {
+  padding: 15px 0;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  background-color: rgba(102, 70, 39, 0.8);
+  z-index: 1;
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  transition: all .3s ease-out; }
+  @media (min-width: 470px) {
+    .mobile-nav {
+      display: none; } }
+  .mobile-nav__list {
+    margin: 15px 20px; }
+    .mobile-nav__list a {
+      text-decoration: none;
+      font-family: "Baloo Bhaijaan", cursive;
+      color: #fff; }
+  .mobile-nav__buy-now {
+    border: #fff 1px solid;
+    padding: 8px;
+    border-radius: 8px; }
+  .mobile-nav__burger-icon {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    margin: 5px 0 0 10px;
+    font-size: 1.6rem;
+    cursor: pointer; }
+    @media (min-width: 470px) {
+      .mobile-nav__burger-icon {
+        display: none; } }
+  .mobile-nav__close-icon {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    margin: 10px 0 0 10px;
+    font-size: 1.3rem;
+    cursor: pointer; }
+    @media (min-width: 470px) {
+      .mobile-nav__close-icon {
+        display: none; } }
+
+.close-mobile-nav {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scaleY(1.7);
+          transform: scaleY(1.7); }
+
+.free-potato {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  color: #474747;
+  font-family: "Baloo Bhaijaan", cursive;
+  z-index: 10;
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  transition: all .4s ease-out; }
+  .free-potato__content {
+    margin: auto;
+    background-color: #FFD700;
+    border-radius: 10px;
+    padding: 30px 0 20px 0;
+    width: 330px;
+    position: relative; }
+    @media (min-width: 470px) {
+      .free-potato__content {
+        width: 450px; } }
+  .free-potato__title {
+    font-size: 2rem;
+    line-height: 1.1;
+    padding: 0 13px; }
+    @media (min-width: 470px) {
+      .free-potato__title {
+        font-size: 2.3rem;
+        padding: 0;
+        line-height: 1.3; } }
+  .free-potato__subtitle {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+    line-height: 1.4; }
+    @media (min-width: 470px) {
+      .free-potato__subtitle {
+        font-size: 1.2rem; } }
+  .free-potato input[type=text] {
+    width: 250px;
+    height: 28px;
+    margin: 10px 0;
+    border-radius: 3px;
+    padding-left: 5px; }
+  .free-potato button {
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px #474747 solid;
+    background-color: #FFD700;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: "Baloo Bhaijaan", cursive;
+    color: #474747;
+    margin: 10px 0 0 0; }
+    .free-potato button:hover {
+      background-color: #f9e9a9; }
+  .free-potato__close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3px 6px 0 0;
+    font-size: 1.3rem;
+    cursor: pointer; }
+    .free-potato__close-button:hover {
+      color: #f9e9a9; }
+
+.close-free-potato-modal {
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  -webkit-transform: scaleX(1.3);
+          transform: scaleX(1.3); }
+
+.contact-us {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  color: #474747;
+  font-family: "Baloo Bhaijaan", cursive;
+  z-index: 10;
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  transition: all .4s ease-out; }
+  .contact-us__content {
+    margin: auto;
+    background-color: #FFD700;
+    border-radius: 10px;
+    padding: 30px 0 20px 0;
+    width: 330px;
+    position: relative; }
+    @media (min-width: 470px) {
+      .contact-us__content {
+        width: 450px; } }
+  .contact-us__title {
+    font-size: 2rem;
+    line-height: 1.1;
+    padding: 0 13px; }
+    @media (min-width: 470px) {
+      .contact-us__title {
+        font-size: 2.3rem;
+        padding: 0;
+        line-height: 1.3; } }
+  .contact-us__subtitle {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+    line-height: 1.4; }
+    @media (min-width: 470px) {
+      .contact-us__subtitle {
+        font-size: 1.2rem; } }
+  .contact-us input[type=text] {
+    width: 250px;
+    height: 28px;
+    margin: 10px 0;
+    border-radius: 3px;
+    padding-left: 5px; }
+  .contact-us textarea {
+    width: 250px;
+    height: 98px;
+    margin-top: 10px; }
+  .contact-us button {
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px #474747 solid;
+    background-color: #FFD700;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: "Baloo Bhaijaan", cursive;
+    color: #474747;
+    margin: 10px 0 0 0; }
+    .contact-us button:hover {
+      background-color: #f9e9a9; }
+  .contact-us__close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3px 6px 0 0;
+    font-size: 1.3rem;
+    cursor: pointer; }
+    .contact-us__close-button:hover {
+      color: #f9e9a9; }
+
+.close-contact-modal {
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  -webkit-transform: scaleX(1.3);
+          transform: scaleX(1.3); }
+
+.message-send {
+  color: crimson;
+  font-size: 0.8rem; }
+
+.about {
+  text-align: center;
+  background-color: #a35a39;
+  padding-bottom: 60px; }
+  @media (min-width: 470px) {
+    .about {
+      padding-bottom: 100px; } }
+  .about__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #474747; }
+    @media (min-width: 470px) {
+      .about__title {
+        font-size: 2.6rem; } }
+  .about__subtitle {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 100;
+    margin: 0; }
+    @media (min-width: 470px) {
+      .about__subtitle {
+        font-size: 1.7rem; } }
+  .about__image {
+    display: flex;
+    align-items: flex-start;
+    max-width: 720px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .about__image__image1 {
+      margin-right: 10px; }
+      @media (min-width: 470px) {
+        .about__image__image1 {
+          margin-right: 0; } }
+    .about__image__image2 {
+      margin-left: 0px;
+      margin-top: 20px;
+      align-self: center; }
+      @media (min-width: 620px) {
+        .about__image__image2 {
+          margin-top: 0; } }
+
+.features {
+  text-align: center;
+  background-color: #EDE0BB;
+  padding-bottom: 60px; }
+  @media (min-width: 470px) {
+    .features {
+      padding-bottom: 100px; } }
+  .features__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #474747;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #fff; }
+    @media (min-width: 470px) {
+      .features__title {
+        font-size: 2.6rem; } }
+  .features__subtitle {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.1rem;
+    color: #474747;
+    font-weight: 100;
+    margin: 0; }
+    @media (min-width: 470px) {
+      .features__subtitle {
+        font-size: 1.7rem; } }
+  .features__image img {
+    margin-top: 30px; }
+  .features__transformed-images {
+    margin-top: 25px; }
+    .features__transformed-images img {
+      margin: 0; }
+      @media (min-width: 470px) {
+        .features__transformed-images img {
+          margin: 0 20px; } }
+
+.nutrition {
+  text-align: center;
+  background-color: #8BA776;
+  padding-bottom: 60px; }
+  @media (min-width: 470px) {
+    .nutrition {
+      padding-bottom: 100px; } }
+  .nutrition__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #474747; }
+    @media (min-width: 470px) {
+      .nutrition__title {
+        font-size: 2.6rem; } }
+  .nutrition__subtitle {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 100;
+    margin: 0; }
+    @media (min-width: 470px) {
+      .nutrition__subtitle {
+        font-size: 1.7rem; } }
+  .nutrition__image {
+    margin-top: 30px; }
+  .nutrition__nutrients-list {
+    display: flex;
+    max-width: 240px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    @media (min-width: 470px) {
+      .nutrition__nutrients-list {
+        margin-top: 30px;
+        max-width: 700px; } }
+    .nutrition__nutrients-list li {
+      font-family: sans-serif;
+      color: #fff;
+      font-weight: 100;
+      font-size: 1rem;
+      flex-basis: 50%;
+      margin: 5px 0; }
+      @media (min-width: 470px) {
+        .nutrition__nutrients-list li {
+          font-size: 1.4rem;
+          flex-basis: initial;
+          margin: 0; } }
+
+.buy {
+  padding-bottom: 60px;
+  background-color: #ead583; }
+  @media (min-width: 470px) {
+    .buy {
+      padding-bottom: 100px; } }
+  .buy__title {
+    font-family: "Baloo Bhaijaan", cursive;
+    font-size: 1.8rem;
+    color: #474747;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px #fff;
+    text-align: center; }
+    @media (min-width: 470px) {
+      .buy__title {
+        font-size: 2.6rem; } }
+  .buy__items-to-sell-container {
+    max-width: 1000px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    @media (min-width: 620px) {
+      .buy__items-to-sell-container {
+        flex-direction: row;
+        margin-top: 20px; } }
+    .buy__items-to-sell-container__deal-container {
+      align-self: center;
+      margin: 10px auto 0 auto;
+      border-bottom: 1px #fff solid; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container__deal-container {
+          margin: 0 auto;
+          border-bottom: 0; } }
+      .buy__items-to-sell-container__deal-container--pro {
+        border: 0;
+        padding: 0;
+        border-bottom: 1px #fff solid; }
+        @media (min-width: 620px) {
+          .buy__items-to-sell-container__deal-container--pro {
+            border-left: 1px #fff solid;
+            border-right: 1px #fff solid;
+            border-bottom: 0;
+            padding: 0 40px; } }
+    .buy__items-to-sell-container__deal-title {
+      color: #474747;
+      font-family: "Baloo Bhaijaan", cursive;
+      font-size: 1.5rem;
+      font-weight: 100;
+      text-align: center; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container__deal-title {
+          font-size: 2rem; } }
+    .buy__items-to-sell-container li {
+      color: #474747;
+      font-family: sans-serif;
+      margin: 15px 0;
+      font-size: 0.8rem; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container li {
+          font-size: 1rem; } }
+    .buy__items-to-sell-container__deal-button {
+      padding: 5px;
+      width: 100px;
+      border-radius: 10px;
+      border: 1px #474747 solid;
+      background-color: #FFD700;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: "Baloo Bhaijaan", cursive;
+      color: #474747;
+      margin: 10px 0 0 0;
+      display: block;
+      margin: 30px auto 0 auto; }
+      .buy__items-to-sell-container__deal-button:hover {
+        background-color: #f9e9a9; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container__deal-button {
+          margin: 50px auto 0 auto;
+          font-size: 1.2rem;
+          padding: 10px; } }
+    .buy__items-to-sell-container__deal-price {
+      color: #474747;
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      text-align: center;
+      margin: 5px 0; }
+    .buy__items-to-sell-container__deal-image {
+      display: block;
+      margin: 10px auto; }
+
+body {
+  background-color: #efefef; }
+
+.potato-word-dark {
+  color: #474747;
+  text-shadow: 1px 1px 0 #fff; }
+
+.potato-word-light {
+  color: #fff;
+  text-shadow: 1px 1px 0 #474747; }

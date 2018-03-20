@@ -22,3 +22,42 @@ gulp.task('watch', ['sass'], function() {
 });
 
 gulp.task('start', ['watch']);
+
+
+// BUILD JS
+
+const imagemin = require('gulp-imagemin'),
+del = require('del'),
+usemin = require('gulp-usemin'),
+rev = require('gulp-rev'),
+cssnano = require('gulp-cssnano'),
+uglify = require('gulp-uglify');
+
+gulp.task('optimizedImages', function() {
+  return gulp.src('./app/assets/images/*')
+  .pipe(imagemin({
+    progressive: true,
+    interlaced: true,
+    multipass: true
+  }))
+  .pipe(gulp.dest('./docs/assets/images'));
+});
+
+gulp.task('delete', function() {
+  return del('./docs');
+});
+
+gulp.task('cssNano', function() {
+  return gulp.src('./app/assets/styles/main-styles.css')
+  .pipe(gulp.dest('./docs/assets/styles'));
+});
+
+gulp.task('uglifyJS', function() {
+  return gulp.src('./app/assets/scripts/*.js')
+  .pipe(gulp.dest('./docs/assets/scripts'))
+});
+
+gulp.task('build', [ 'delete', 'optimizedImages', 'cssNano', 'uglifyJS'], function() {
+  return gulp.src('./app/*.html')
+  .pipe(gulp.dest('./docs'));
+});
