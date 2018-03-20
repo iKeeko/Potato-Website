@@ -35,9 +35,6 @@ const mainApp = new Vue({
 
 const footer = new Vue({
   el: '#footer',
-  data: {
-
-  },
   methods: {
     openPotatoModal() {
       mainApp.potatoModal = true;

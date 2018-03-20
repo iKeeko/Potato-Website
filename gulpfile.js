@@ -47,8 +47,9 @@ gulp.task('delete', function() {
   return del('./docs');
 });
 
-gulp.task('cssNano', function() {
+gulp.task('cssMinify', function() {
   return gulp.src('./app/assets/styles/main-styles.css')
+  .pipe(cssnano())
   .pipe(gulp.dest('./docs/assets/styles'));
 });
 
@@ -57,7 +58,7 @@ gulp.task('uglifyJS', function() {
   .pipe(gulp.dest('./docs/assets/scripts'))
 });
 
-gulp.task('build', [ 'delete', 'optimizedImages', 'cssNano', 'uglifyJS'], function() {
+gulp.task('build', [ 'delete', 'optimizedImages', 'cssMinify', 'uglifyJS'], function() {
   return gulp.src('./app/*.html')
   .pipe(gulp.dest('./docs'));
 });
