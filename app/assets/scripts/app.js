@@ -56,9 +56,9 @@ const footer = new Vue({
       mainApp.contactModal = true;
     },
     copyright() {
-      let potato = prompt('Type the word potato to see the reference link of this page', '');
+      let potato = prompt('Type the word potato to see the reference link of this page.', '');
       if (potato === 'potato' || potato === 'Potato') {
-        alert('https://dribbble.com/shots/2042501-Potato-landing-page.');
+        alert('https://dribbble.com/shots/2042501-Potato-landing-page');
       } else {
         alert("Don\'t know how to spell potato?");
         potato = prompt('One more time!', '');
