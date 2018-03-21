@@ -31,7 +31,7 @@ del = require('del'),
 usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
-uglify = require('gulp-uglify');
+uglify = require('gulp-uglify-es').default;
 
 gulp.task('optimizedImages', function() {
   return gulp.src('./app/assets/images/*')
@@ -55,8 +55,10 @@ gulp.task('cssMinify', function() {
 
 gulp.task('uglifyJS', function() {
   return gulp.src('./app/assets/scripts/*.js')
-  .pipe(gulp.dest('./docs/assets/scripts'))
+  .pipe(uglify())
+  .pipe(gulp.dest('./docs/assets/scripts'));
 });
+
 
 gulp.task('build', [ 'delete', 'optimizedImages', 'cssMinify', 'uglifyJS'], function() {
   return gulp.src('./app/*.html')
