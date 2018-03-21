@@ -116,7 +116,8 @@ footer {
       font-weight: 300;
       color: #474747; }
     .footer__copyright li:last-child {
-      margin: 0 20px 0 20px; }
+      margin: 0 20px 0 20px;
+      cursor: pointer; }
   .footer__links {
     display: block;
     margin-top: 15px; }
@@ -135,7 +136,8 @@ footer {
         color: #474747;
         text-decoration: none;
         font-family: sans-serif;
-        font-size: 0.7rem; }
+        font-size: 0.7rem;
+        cursor: pointer; }
         .footer__links li a:hover {
           color: #8BA776; }
     .footer__links li:last-child {

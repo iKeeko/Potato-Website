@@ -79,9 +79,9 @@
           <h2 class="free-potato__title">Free one whole potato!</h2>
           <p class="free-potato__subtitle">Just fill up your name and address and potato will be right at your door!</p>
           <form class="free-potato__form">
-            <p><input type="text" placeholder="your name" required/></p>
-            <p><input type="text" placeholder="your address" required/></p>
-            <p><button @click="messageSend">Send</button></p>
+            <p><input v-model="fname" type="text" placeholder="your name" required/></p>
+            <p><input v-model="address" type="text" placeholder="your address" required/></p>
+            <p><button @click.prevent="submitFreePotato">Send</button></p>
             <p><span class="message-send">{{ message }}</span></p>
           </form>
         </div>
@@ -108,7 +108,7 @@
       <div class="footer" id="footer">
         <ul class="footer__copyright">
           <li>Since you came here to read this, have one <img @click="openPotatoModal" class="footer__small-potato-image" src="assets/images/potato-tiny.png"> for free!</li>
-          <li>Copyright &copy; 2018 Potato All rights reserved.</li>
+          <li @click.prevent="copyright">Copyright &copy; 2018 Potato All rights reserved.</li>
         </ul>
         <ul class="footer__links">
           <li><a href="https://www.youtube.com/watch?v=QiqqC_fbP1c" target="_blank">POTATO KING</a></li>

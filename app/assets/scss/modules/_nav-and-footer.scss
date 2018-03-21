@@ -104,6 +104,7 @@ footer {
 
     li:last-child {
       margin: 0 20px 0 20px;
+      cursor: pointer;
     }
   }
 
@@ -130,6 +131,7 @@ footer {
           text-decoration: none;
           font-family: sans-serif;
           font-size: 0.7rem;
+          cursor: pointer;
 
           &:hover {
             color: $green;

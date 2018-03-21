@@ -5,7 +5,9 @@ const mainApp = new Vue({
     open: false,
     potatoModal: false,
     contactModal: false,
-    message: ''
+    message: '',
+    fname: '',
+    address: ''
   },
   methods: {
     openNav() {
@@ -29,18 +31,43 @@ const mainApp = new Vue({
     },
     buyButton() {
       alert('Oops out of stock!');
+    },
+    submitFreePotato() {
+      if(this.fname.length >= 1 && this.address.length >= 1) {
+      alert(`Thank you ${this.fname}, your potato will be sent to ${this.address}.`);
+      this.fname = '';
+      this.address = '';
+    }else {
+      alert('Please complete the form.');
+    }
     }
   }
 });
-
 const footer = new Vue({
   el: '#footer',
+  data: {
+    dribble: '#'
+  },
   methods: {
     openPotatoModal() {
       mainApp.potatoModal = true;
     },
     openContactModal() {
       mainApp.contactModal = true;
+    },
+    copyright() {
+      let potato = prompt('Type the word potato to see the reference link of this page', '');
+      if (potato === 'potato' || potato === 'Potato') {
+        alert('https://dribbble.com/shots/2042501-Potato-landing-page.');
+      } else {
+        alert("Don\'t know how to spell potato?");
+        potato = prompt('One more time!', '');
+        if (potato === 'potato' || potato === 'Potato') {
+          alert('https://dribbble.com/shots/2042501-Potato-landing-page');
+      } else {
+        alert('I understand you don\'t like potato.');
+      }
     }
   }
+}
 });
