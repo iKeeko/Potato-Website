@@ -48,7 +48,7 @@ gulp.task('delete', function() {
 });
 
 gulp.task('cssMinify', function() {
-  return gulp.src('./app/assets/styles/main-styles.css')
+  return gulp.src('./app/assets/styles/*.css')
   .pipe(cssnano())
   .pipe(gulp.dest('./docs/assets/styles'));
 });

@@ -9,22 +9,25 @@
     <link rel="icon" href="assets/images/potato-icon.png" type="image/png">
     <script src="assets/scripts/vue.min.js"></script>
     <script src="assets/scripts/picturefill.min.js"></script>
+    <link href="assets/styles/animate.min.css" rel="stylesheet">
     <title>Features - Potato Website</title>
   </head>
   <body>
     <div class="features" id="vue">
       <!-- MOBILE NAV START HERE -->
-      <p v-if="burgerIcon" class="mobile-nav__burger-icon" @click="openNav">&#9776;</p>
-      <nav class="mobile-nav-container">
-        <p v-if="!burgerIcon" @click="closeNav" class="mobile-nav__close-icon">&#10005;</p>
-        <ul :class="{'mobile-nav': open, 'close-mobile-nav': !open}">
-          <li class="mobile-nav__list"><a href="index.html">HOME</a></li>
-          <li class="mobile-nav__list"><a href="about.html">ABOUT</a></li>
-          <li class="mobile-nav__list"><a href="features.html">FEATURES</a></li>
-          <li class="mobile-nav__list"><a href="nutrition.html">NUTRITION</a></li>
-          <li class="mobile-nav__list"><a href="buy.html"><span class="mobile-nav__buy-now">BUY IT NOW</span></a></li>
-        </ul>
-      </nav>
+      <p @click="openMobileNav" v-if="burgerIcon" class="mobile-nav__burger-icon">&#9776;</p>
+      <transition enter-active-class="animated rollIn">
+        <nav class="mobile-nav-container" v-if="openNav">
+          <p v-if="!burgerIcon" @click="closeMobileNav" class="mobile-nav__close-icon">&#10005;</p>
+          <ul class="mobile-nav">
+            <li class="mobile-nav__list"><a href="index.html">HOME</a></li>
+            <li class="mobile-nav__list"><a href="about.html">ABOUT</a></li>
+            <li class="mobile-nav__list"><a href="features.html">FEATURES</a></li>
+            <li class="mobile-nav__list"><a href="nutrition.html">NUTRITION</a></li>
+            <li class="mobile-nav__list"><a href="buy.html"><span class="mobile-nav__buy-now">BUY IT NOW</span></a></li>
+          </ul>
+        </nav>
+      </transition>
       <!-- END MOBILE NAV -->
       <nav>
         <ul class="main-nav">
@@ -51,34 +54,38 @@
         </div>
       </div>
       <!-- MODALS START -->
-      <div :class="{'free-potato': potatoModal, 'close-free-potato-modal' : !potatoModal}">
-        <div class="free-potato__content">
-          <p @click="closePotatoModal" class="free-potato__close-button">X</p>
-          <h2 class="free-potato__title">Free one whole potato!</h2>
-          <p class="free-potato__subtitle">Just fill up your name and address and potato will be right at your door!</p>
-          <form class="free-potato__form">
-            <p><input v-model="fname" type="text" placeholder="your name" required/></p>
-            <p><input v-model="address" type="text" placeholder="your address" required/></p>
-            <p><button @click.prevent="submitFreePotato">Send</button></p>
-            <p><span class="message-send">{{ message }}</span></p>
-          </form>
+      <transition enter-active-class="animated tada" leave-active-class="animated bounceOutRight">
+        <div v-if="potatoModal" class="free-potato">
+          <div class="free-potato__content">
+            <p class="free-potato__close-button" @click="potatoModal = !potatoModal">X</p>
+            <h2 class="free-potato__title">Free one whole potato!</h2>
+            <p class="free-potato__subtitle">Just fill up your name and address and potato will be right at your door!</p>
+            <form class="free-potato__form">
+              <p><input v-model="fname" type="text" placeholder="your name" required/></p>
+              <p><input v-model="address" type="text" placeholder="your address" required/></p>
+              <p><button @click.prevent="submitFreePotato">Send</button></p>
+              <p><span class="message-send">{{ message }}</span></p>
+            </form>
+          </div>
         </div>
-      </div>
-      <div :class="{'contact-us': contactModal, 'close-contact-modal' : !contactModal}">
-        <div class="contact-us__content">
-          <p @click="closeContactModal" class="contact-us__close-button">X</p>
-          <h2 class="contact-us__title">Get in touch now!</h2>
-          <p class="contact-us__subtitle">We will get back to you in 31 secs</p>
-          <form class="contact-us__form">
-            <p><input type="text" placeholder="your name" required/></p>
-            <p><input type="text" placeholder="your email" required/></p>
-            <p><input type="text" placeholder="your favourite potato dish" required/></p>
-            <p><textarea placeholder="write something. . ."></textarea></p>
-            <p><button @click="messageSend">Send</button></p>
-            <p><span class="message-send">{{ message }}</span></p>
-          </form>
+      </transition>
+      <transition enter-active-class="animated swing" leave-active-class="animated bounceOutRight">
+        <div v-if="contactModal" class="contact-us">
+          <div class="contact-us__content">
+            <p class="contact-us__close-button" @click="contactModal = !contactModal">X</p>
+            <h2 class="contact-us__title">Get in touch now!</h2>
+            <p class="contact-us__subtitle">We will get back to you in 31 secs</p>
+            <form class="contact-us__form">
+              <p><input type="text" placeholder="your name" required/></p>
+              <p><input type="text" placeholder="your email" required/></p>
+              <p><input type="text" placeholder="your favourite potato dish" required/></p>
+              <p><textarea placeholder="write something. . ."></textarea></p>
+              <p><button @click="messageSend">Send</button></p>
+              <p><span class="message-send">{{ message }}</span></p>
+            </form>
+          </div>
         </div>
-      </div>
+      </transition>
       <!-- MODALS END -->
     </div>
 
@@ -86,7 +93,7 @@
       <div class="footer" id="footer">
         <ul class="footer__copyright">
           <li>Since you came here to read this, have one <img @click="openPotatoModal" class="footer__small-potato-image" src="assets/images/potato-tiny.png"> for free!</li>
-          <li @click.prevent="copyright">Copyright &copy; 2018 Potato All rights reserved.</li>
+            <li @click.prevent="copyright">Copyright &copy; 2018 Potato All rights reserved.</li>
         </ul>
         <ul class="footer__links">
           <li><a href="https://www.youtube.com/watch?v=QiqqC_fbP1c" target="_blank">POTATO KING</a></li>

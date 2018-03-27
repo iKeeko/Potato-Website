@@ -1,8 +1,8 @@
-const mainApp = new Vue({
+var mainApp = new Vue({
   el: '#vue',
   data: {
     burgerIcon: true,
-    open: false,
+    openNav: false,
     potatoModal: false,
     contactModal: false,
     message: '',
@@ -10,53 +10,46 @@ const mainApp = new Vue({
     address: ''
   },
   methods: {
-    openNav() {
-      this.open = true;
+    openMobileNav : function() {
       this.burgerIcon = false;
+      this.openNav = true;
     },
-    closeNav() {
-      this.open = false;
+    closeMobileNav : function() {
       this.burgerIcon = true;
+      this.openNav = false;
     },
-    closePotatoModal() {
-      this.potatoModal = false;
-      this.message = '';
-    },
-    closeContactModal() {
-      this.contactModal = false;
-      this.message = '';
-    },
-    messageSend() {
+    messageSend : function() {
       this.message = 'message sent or not!';
     },
-    buyButton() {
+    buyButton : function() {
       alert('Oops out of stock!');
     },
-    submitFreePotato() {
+    submitFreePotato : function() {
       if(this.fname.length >= 1 && this.address.length >= 1) {
-      alert(`Thank you ${this.fname}, your potato will be sent to ${this.address}.`);
+      alert("Thank you "+ this.fname + ", your potato will be sent to " + this.address + ".");
       this.fname = '';
       this.address = '';
+      this.potatoModal = false;
     }else {
       alert('Please complete the form.');
     }
     }
   }
 });
-const footer = new Vue({
+var footer = new Vue({
   el: '#footer',
   data: {
     dribble: '#'
   },
   methods: {
-    openPotatoModal() {
+    openPotatoModal : function() {
       mainApp.potatoModal = true;
     },
-    openContactModal() {
+    openContactModal : function() {
       mainApp.contactModal = true;
     },
-    copyright() {
-      let potato = prompt('Type the word potato to see the reference link of this page.', '');
+    copyright : function() {
+      var potato = prompt('Type the word potato to see the reference link of this page.', '');
       if (potato === 'potato' || potato === 'Potato') {
         alert('https://dribbble.com/shots/2042501-Potato-landing-page');
       } else {
