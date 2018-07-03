@@ -164,10 +164,7 @@ footer {
   justify-content: center;
   max-width: 100%;
   background-color: rgba(102, 70, 39, 0.9);
-  z-index: 1;
-  opacity: 1;
-  transform: scaleY(1);
-  transition: all .3s ease-out;
+  z-index: 2;
 
   @include atSmall {
     display: none;
@@ -204,7 +201,7 @@ footer {
 
   &__close-icon {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     color: $white;
     margin: 10px 0 0 10px;
     font-size: 1.3rem;
@@ -219,7 +216,4 @@ footer {
 .close-mobile-nav {
   position: absolute;
   z-index: -1;
-  opacity: 0;
-  transform: scaleY(1.7);
-
 }

@@ -15,7 +15,6 @@
     <div class="buy" id="vue">
       <!-- MOBILE NAV START HERE -->
       <p @click="openMobileNav" v-if="burgerIcon" class="mobile-nav__burger-icon">&#9776;</p>
-      <transition enter-active-class="animated rollIn">
         <nav class="mobile-nav-container" v-if="openNav">
           <p v-if="!burgerIcon" @click="closeMobileNav" class="mobile-nav__close-icon">&#10005;</p>
           <ul class="mobile-nav">
@@ -26,7 +25,6 @@
             <li class="mobile-nav__list"><a href="buy.html"><span class="mobile-nav__buy-now">BUY IT NOW</span></a></li>
           </ul>
         </nav>
-      </transition>
       <!-- END MOBILE NAV -->
       <nav>
         <ul class="main-nav">

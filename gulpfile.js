@@ -1,18 +1,22 @@
 const gulp = require('gulp'),
 sass = require('gulp-sass'),
-browserSync = require('browser-sync'),
+browserSync = require('browser-sync').create(),
 prefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
   return gulp.src('app/assets/scss/main-styles.scss')
   .pipe(sass())
-  .pipe(prefixer())
+  .pipe(prefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
   .pipe(gulp.dest('app/assets/styles'))
   .pipe(browserSync.stream());
 });
 
 gulp.task('watch', ['sass'], function() {
   browserSync.init({
+    notify: false,
     server: './app'
   });
 
