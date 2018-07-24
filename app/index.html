@@ -29,7 +29,7 @@
       <!-- END MOBILE NAV -->
       <nav>
         <ul class="main-nav">
-          <p class="main-nav__logo">🥔 Potato</p>
+          <p class="main-nav__logo"><img src="assets/images/potato-logo.png" alt="logo" /> <span>Potato</span></p>
           <li class="main-nav__list"><a href="index.html">HOME</a></li>
           <li class="main-nav__list"><a href="about.html">ABOUT</a></li>
           <li class="main-nav__list"><a href="features.html">FEATURES</a></li>
@@ -49,7 +49,7 @@
       </div>
       <!-- MODALS START -->
       <transition enter-active-class="animated tada" leave-active-class="animated bounceOutRight">
-        <div v-if="potatoModal" class="free-potato">
+        <div v-if="potatoModal" class="free-potato" v-cloak>
           <div class="free-potato__content">
             <p class="free-potato__close-button" @click="potatoModal = !potatoModal">X</p>
             <h2 class="free-potato__title">Free one whole potato!</h2>
@@ -64,7 +64,7 @@
         </div>
       </transition>
       <transition enter-active-class="animated swing" leave-active-class="animated bounceOutRight">
-        <div v-if="contactModal" class="contact-us">
+        <div v-if="contactModal" class="contact-us" v-cloak>
           <div class="contact-us__content">
             <p class="contact-us__close-button" @click="contactModal = !contactModal">X</p>
             <h2 class="contact-us__title">Get in touch now!</h2>

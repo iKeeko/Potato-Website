@@ -67,6 +67,14 @@ img {
     font-size: 1.6rem;
     font-weight: 100;
     margin: 10px 10px 0 0; }
+    .main-nav__logo img {
+      max-width: 40px;
+      vertical-align: middle; }
+      @media (min-width: 470px) {
+        .main-nav__logo img {
+          max-width: 50px; } }
+    .main-nav__logo span {
+      vertical-align: middle; }
     @media (min-width: 470px) {
       .main-nav__logo {
         font-size: 2rem;
@@ -214,6 +222,10 @@ footer {
 .close-mobile-nav {
   position: absolute;
   z-index: -1; }
+
+.current-page {
+  color: #474747 !important;
+  text-shadow: 0px 0px 1px #efefef; }
 
 .free-potato {
   position: fixed;
@@ -552,8 +564,6 @@ footer {
         flex-direction: row;
         margin-top: 20px; } }
     .buy__items-to-sell-container__deal-container {
-      -ms-flex-item-align: center;
-      align-self: center;
       margin: 10px auto 0 auto;
       border-bottom: 1px #fff solid; }
       @media (min-width: 470px) {
@@ -569,7 +579,7 @@ footer {
             border-left: 1px #fff solid;
             border-right: 1px #fff solid;
             border-bottom: 0;
-            padding: 0 40px; } }
+            padding: 0 76px; } }
       .buy__items-to-sell-container__deal-container--team {
         border-bottom: 0; }
     .buy__items-to-sell-container__deal-title {
@@ -618,7 +628,10 @@ footer {
       margin: 5px 0; }
     .buy__items-to-sell-container__deal-image {
       display: block;
-      margin: 10px auto; }
+      margin: 15px auto; }
+      @media (min-width: 470px) {
+        .buy__items-to-sell-container__deal-image {
+          margin: 35px auto; } }
 
 body {
   background-color: #efefef; }
@@ -630,3 +643,6 @@ body {
 .potato-word-light {
   color: #fff;
   text-shadow: 1px 1px 0 #474747; }
+
+[v-cloak] {
+  display: none; }
